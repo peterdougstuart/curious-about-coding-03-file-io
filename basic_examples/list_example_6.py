@@ -25,7 +25,12 @@ c = []
 for i in range(len(a)):
     c.append(a[i] + b[i])
 
+for i in range(len(c)):
+    print(c[i])
+
 # concatenation of two lists
+
+print("Concatenation of two lists")
 
 d = a + b
 

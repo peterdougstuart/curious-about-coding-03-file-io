@@ -9,4 +9,4 @@ print("Max", max(cost_breakdown))
 print("Len", len(cost_breakdown))
 
 # we can calculate the average by dividing the sum by the length
-print(sum(cost_breakdown) / len(cost_breakdown))
+print("Average", sum(cost_breakdown) / len(cost_breakdown))
