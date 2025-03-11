@@ -1,20 +1,56 @@
-# Open a file and read its contents into a list
+# path = "C:\\Users\\Stuart\\GitHub\\curious-about-coding-03-file-io\\example_data\\one_column_data.csv"
 
-import os
+path = r"C:\Users\Stuart\GitHub\curious-about-coding-03-file-io\example_data\one_column_data.csv"
 
-# Determine the path to the example data file
-script_dir = os.path.dirname(__file__)
-repo_root = os.path.dirname(script_dir)
-examples_dir = os.path.join(repo_root, "example_data")
-example_file = os.path.join(examples_dir, "one_column_data.csv")
+# read a file with readline
 
-print("Loading data from:", example_file)
+f = open(path, mode="r")
 
-data = []
+keep_reading = True
 
-with open(example_file) as f:
-    for line in f:
-        data.append(line.strip())
+while keep_reading:
 
-for i in range(len(data)):
-    print(data[i])
+    line = f.readline()
+
+    if line == "":
+        keep_reading = False
+    else:
+        print(line)
+
+f.close()
+
+# read a file looping over the lines
+
+f = open(path, mode="r")
+
+for line in f:
+    line = line.strip()
+    print(line)
+
+f.close()
+
+# loop over file and store lines in a list (memory inefficient)
+
+f = open(path, mode="r")
+
+lines = []
+
+for line in f:
+    line = line.strip()
+    lines.append(line)
+
+for line in lines:
+    print(line)
+
+# read a file with readlines (memory inefficient)
+
+f = open(path, mode="r")
+
+# reads all the lines
+lines = f.readlines()
+
+for line in lines:
+    line = line.strip()
+    print(line)
+
+f.close()
