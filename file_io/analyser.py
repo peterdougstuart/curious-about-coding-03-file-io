@@ -46,7 +46,7 @@ class BaseAnalyserForm(tk.Tk):
             self.log_text(f"Selected file: {path}")
             self.analyse(path)
 
-    def analyse(self):
+    def analyse(self, path):
         self.log_text("Base analyze method called. Override this in your subclass.")
 
     def log_text(self, message):
