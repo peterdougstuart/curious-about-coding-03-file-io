@@ -1,6 +1,10 @@
-# path = "C:\\Users\\Stuart\\GitHub\\curious-about-coding-03-file-io\\example_data\\one_column_data.csv"
+from os.path import dirname, join
 
-path = r"C:\Users\Stuart\GitHub\curious-about-coding-03-file-io\example_data\one_column_data.csv"
+path = join(
+    dirname(dirname(__file__)),
+    "example_data",
+    "santas_nice_list.csv",
+)
 
 # read a file with readline
 

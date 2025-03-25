@@ -1,4 +1,10 @@
-path = r"C:\Users\Stuart\GitHub\curious-about-coding-03-file-io\example_data\santas_nice_list.csv"
+from os.path import dirname, join
+
+path = join(
+    dirname(dirname(__file__)),
+    "example_data",
+    "santas_nice_list.csv",
+)
 
 file_handler = open(path, mode="r")
 
